@@ -12,8 +12,8 @@ Java通用的任务执行器，基于java.util.concurrent.ScheduledExecutorServi
   
 #### B. 多线程，各任务的执行互不影响。
  
-#### C. 低误差
+#### C. 低误差。
  
-#### D. 采用<key,task>键值对的形式进行任务的调度控制。
+#### D. 采用<key,task>键值对的形式，来进行任务的调度控制。
 
 #### E. 没有多余的环境依赖，可以运行在几乎所有的Java 1.8平台上。

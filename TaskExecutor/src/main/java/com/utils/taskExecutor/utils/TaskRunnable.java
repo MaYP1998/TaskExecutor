@@ -24,11 +24,22 @@ public class TaskRunnable implements Runnable {
     private Task task;
     private ScheduledExecutorService service;
 
+    private Future<?> future;
+
     @Override
     public void run() {
         runnable.run();
-        Future<?> future = service.schedule(this, this.getNextTriggerTime(), TimeUnit.MILLISECONDS);
+        future = service.schedule(this, this.getNextTriggerTime(), TimeUnit.MILLISECONDS);
         task.setFuture(future);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        try {
+            future.cancel(true);
+        } catch (Exception e) {
+        }
+        super.finalize();
     }
 
     //获取下次执行时间

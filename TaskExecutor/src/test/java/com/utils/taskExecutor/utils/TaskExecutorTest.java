@@ -21,20 +21,20 @@ public class TaskExecutorTest {
         TaskExecutor taskExecutor = TaskExecutor.getInstance();
         Map<String, Task> map = new HashMap<>();
         Task task1 = new Task(() -> {
-            System.out.println("Hello!" + LocalDateTime.now().toLocalTime()+ ";");
+            // System.out.println("Hello!" + LocalDateTime.now().toLocalTime()+ ";");
         }, "0/5 * * * * ?");
         map.put("task1", task1);
         Task task2 = new Task(() -> {
             System.out.println("Hello2!" + LocalDateTime.now().toLocalTime()+ ";");
-        }, "5/10 * * * * ?");
+        }, "25-36 1/2 * * * ? ");
         map.put("task2", task2);
         Task task3 = new Task(() -> {
-            System.out.println("Hello3!" + LocalDateTime.now().toLocalTime()+ ";");
+            // System.out.println("Hello3!" + LocalDateTime.now().toLocalTime()+ ";");
         }, "30/30 * * * * ?");
         map.put("task3", task3);
 
         Task task4 = new Task(() -> {
-            System.out.println("Hello4!" + LocalDateTime.now().toLocalTime()+ ";");
+            // System.out.println("Hello4!" + LocalDateTime.now().toLocalTime()+ ";");
         }, new Date(10000 + new Date().getTime()), 15000);
         map.put("task4", task4);
 

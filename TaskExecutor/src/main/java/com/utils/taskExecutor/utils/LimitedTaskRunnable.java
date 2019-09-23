@@ -28,16 +28,23 @@ public class LimitedTaskRunnable implements Runnable {
 
     @Override
     public void run() {
-        runnable.run();
-        run++;
-        task.setRun(task.getRun() + 1);
-        if (type) {
+        if (type && run >= runNumber) {
+            Future<?> future = task.getFuture();
+            task.setFuture(null);
+            future.cancel(true);
+        } else {
+            runnable.run();
+            run++;
+            task.setRun(task.getRun() + 1);
+            if (type) {
 //            System.out.println("run:" + run + ", runNumber:" + runNumber);
-            if (run >= runNumber) {
-                Future<?> future = task.getFuture();
-                task.setFuture(null);
-                future.cancel(true);
+                if (run >= runNumber) {
+                    Future<?> future = task.getFuture();
+                    task.setFuture(null);
+                    future.cancel(true);
+                }
             }
         }
+
     }
 }

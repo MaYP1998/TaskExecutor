@@ -38,7 +38,7 @@ public class TaskExecutorTest {
 
         Task task4 = new Task(() -> {
             System.out.println("Hello4!" + LocalDateTime.now().toLocalTime()+ ";");
-        }, new Date(new Date().getTime()+1000), 1);
+        }, new Date(new Date().getTime()+1000), 1, true);
         task4.setMaxRunNumber(3);
         map.put("task4", task4);
 

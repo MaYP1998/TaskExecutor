@@ -50,27 +50,27 @@ public class TaskExecutorTest {
         while (true) {
             long nowtime = new Date().getTime();
             long temp = (nowtime - starttime) % 60000;
-            if (temp <= 15000) {
-                if (t) {
-                    taskExecutor.startTask("task1");
-                    t = false;
-                }
-            } else if (temp <= 30000) {
-                taskExecutor.pauseTask("task1");
-            } else if (temp <= 45000) {
-                taskExecutor.shutdownTask("task1");
-            } else {
-                taskExecutor.addTask("task1", task1);
-                t = true;
-                break;
-            }
-            //System.out.println("time:" + LocalDateTime.now().toLocalTime() + ", status:" + taskExecutor.getAllTaskStatus());
-            System.out.println("runNumber:" + taskExecutor.getAllTaskRunNumber());
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            break;
+//            if (temp <= 15000) {
+//                if (t) {
+//                    taskExecutor.startTask("task1");
+//                    t = false;
+//                }
+//            } else if (temp <= 30000) {
+//                taskExecutor.pauseTask("task1");
+//            } else if (temp <= 45000) {
+//                taskExecutor.shutdownTask("task1");
+//            } else {
+//                taskExecutor.addTask("task1", task1);
+//                t = true;
+//            }
+//            //System.out.println("time:" + LocalDateTime.now().toLocalTime() + ", status:" + taskExecutor.getAllTaskStatus());
+//            System.out.println("runNumber:" + taskExecutor.getAllTaskRunNumber());
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
         }
     }
 }

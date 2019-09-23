@@ -3,6 +3,15 @@ Java universal task executor, base on the java.util.concurrent.ScheduledExecutor
 
 Java通用的任务执行器，基于java.util.concurrent.ScheduledExecutorService工具类实现。
 
+##### Maven:
+```
+<dependency>
+  <groupId>com.github.mayp1998.taskExecutor</groupId>
+  <artifactId>taskExecutor</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
 
 #### A. 拥有多项任务调度功能：
 

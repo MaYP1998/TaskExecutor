@@ -62,6 +62,7 @@ public class TaskExecutorTest {
             } else {
                 taskExecutor.addTask("task1", task1);
                 t = true;
+                break;
             }
             //System.out.println("time:" + LocalDateTime.now().toLocalTime() + ", status:" + taskExecutor.getAllTaskStatus());
             System.out.println("runNumber:" + taskExecutor.getAllTaskRunNumber());

@@ -26,11 +26,20 @@ public class TaskRunnable implements Runnable {
 
     private Future<?> future;
 
+    public TaskRunnable(Runnable runnable, String cron, Task task, ScheduledExecutorService service) {
+        this.runnable = runnable;
+        this.cron = cron;
+        this.task = task;
+        this.service = service;
+    }
+
     @Override
     public void run() {
         runnable.run();
-        future = service.schedule(this, this.getNextTriggerTime(), TimeUnit.MILLISECONDS);
-        task.setFuture(future);
+        if (task.getFuture() != null) {
+            future = service.schedule(this, this.getNextTriggerTime(), TimeUnit.MILLISECONDS);
+            task.setFuture(future);
+        }
     }
 
     @Override

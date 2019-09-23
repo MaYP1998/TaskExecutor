@@ -58,6 +58,26 @@ public class TaskExecutor {
     }
   }
 
+  public Map<String, Integer> getAllTaskRunNumber() {
+    Map<String, Integer> result = new HashMap<>();
+    for (Map.Entry<String, Task> task : group.entrySet()) {
+      result.put(task.getKey(), (task.getValue().getRun()));
+    }
+    return result;
+  }
+
+  /**
+   * 获取某任务的运行次数
+   * @param taskId
+   * @return
+   */
+  public Integer getTaskRunNumber(String taskId) {
+    if (group.containsKey(taskId)) {
+      return group.get(taskId).getRun();
+    }
+    return null;
+  }
+
   /**
    * 获取某个任务
    * @param taskId
@@ -77,8 +97,8 @@ public class TaskExecutor {
    */
   public Map<String, Boolean> getAllTaskStatus() {
     Map<String, Boolean> result = new HashMap<>();
-    for (String id : group.keySet()) {
-      result.put(id, (group.get(id).getFuture() != null));
+    for (Map.Entry<String, Task> task : group.entrySet()) {
+      result.put(task.getKey(), (task.getValue().getFuture() != null));
     }
     return result;
   }
@@ -123,8 +143,8 @@ public class TaskExecutor {
     for (boolean i : isForceToStop) {
       forceToStop = i;
     }
-    for (String id : newTaskMap.keySet()) {
-      alterAndRunTask(id, newTaskMap.get(id), forceToStop);
+    for (Map.Entry<String,Task> newTask : newTaskMap.entrySet()) {
+      alterAndRunTask(newTask.getKey(), newTask.getValue(), forceToStop);
     }
   }
 
@@ -162,8 +182,8 @@ public class TaskExecutor {
     for (boolean i : isForceToStop) {
       forceToStop = i;
     }
-    for (String id : newTaskMap.keySet()) {
-      alterTask(id, newTaskMap.get(id), forceToStop);
+    for (Map.Entry<String,Task> newTask : newTaskMap.entrySet()) {
+      alterTask(newTask.getKey(), newTask.getValue(), forceToStop);
     }
   }
 
@@ -221,9 +241,9 @@ public class TaskExecutor {
   public void runTasks(Map<String, Task> taskMap) {
 
     addTasks(taskMap);
-    for (String id : taskMap.keySet()) {
-      Task task = taskMap.get(id);
-      if (id != null && task != null) {
+    for (Map.Entry<String,Task> newTask : taskMap.entrySet()) {
+      Task task = newTask.getValue();
+      if (newTask.getKey() != null && task != null) {
         startTask(task);
       }
     }
@@ -247,8 +267,8 @@ public class TaskExecutor {
    * @param taskMap
    */
   public void addTasks(Map<String, Task> taskMap) {
-    for (String id : taskMap.keySet()) {
-      addTask(id, taskMap.get(id));
+    for (Map.Entry<String,Task> newTask : taskMap.entrySet()) {
+      addTask(newTask.getKey(), newTask.getValue());
     }
   }
 
@@ -332,8 +352,8 @@ public class TaskExecutor {
         Date start = task.getStart();
         Integer period = task.getPeriod();
         Boolean isRunNow = task.isRunNow();
-        Runnable runnable = task.getRunnable();
-
+        //Runnable runnable = task.getRunnable();
+        Runnable runnable = new LimitedTaskRunnable(task);
 
         Future<?> future = null;
         if (isRunNow) {
@@ -359,11 +379,7 @@ public class TaskExecutor {
         }
         task.setFuture(future);
       } else {
-        TaskRunnable runnable = new TaskRunnable();
-        runnable.setRunnable(task.getRunnable());
-        runnable.setCron(task.getCron());
-        runnable.setTask(task);
-        runnable.setService(service);
+        TaskRunnable runnable = new TaskRunnable(new LimitedTaskRunnable(task), task.getCron(), task, service);
 
         Future<?> future = service.schedule(runnable, runnable.getNextTriggerTime(), TimeUnit.MILLISECONDS);
 

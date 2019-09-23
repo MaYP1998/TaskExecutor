@@ -18,6 +18,9 @@ public class Task {
 
   private String cron;// 任务执行周期的cron表达式
 
+  private int maxRunNumber = 0;
+
+  private int run = 0;
   private Runnable runnable;
   private Future<?> future;
 
@@ -75,6 +78,25 @@ public class Task {
     this.cron = cron;
   }
 
+  /**
+   * 设置运行次数限制
+   * @param runNumber 若大于0，则表示此任务每次启动后将在运行runNumber次数后暂停运行；否则表示取消之前所设置的运行次数限制
+   * @return
+   */
+  public Task setMaxRunNumber(int runNumber) {
+    this.maxRunNumber = runNumber;
+    return this;
+  }
+
+  /**
+   * 取消运行次数限制
+   * @return
+   */
+  public Task cancelMaxRunNumber() {
+    this.maxRunNumber = 0;
+    return this;
+  }
+
   @Override
   protected void finalize() throws Throwable {
     stop(false);
@@ -123,5 +145,17 @@ public class Task {
 
   public final String getCron() {
     return cron;
+  }
+
+  public final int getMaxRunNumber() {
+    return maxRunNumber;
+  }
+
+  public final int getRun() {
+    return run;
+  }
+
+  public final void setRun(int run) {
+    this.run = run;
   }
 }

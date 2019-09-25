@@ -38,7 +38,9 @@ public class TaskRunnable implements Runnable {
         runnable.run();
         if (task.getFuture() != null) {
             future = service.schedule(this, this.getNextTriggerTime(), TimeUnit.MILLISECONDS);
+            Future<?> last = task.getFuture();
             task.setFuture(future);
+            last.cancel(true);
         }
     }
 

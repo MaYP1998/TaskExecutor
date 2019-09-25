@@ -7,17 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f34a3b1-fc25-47ad-b380-92fcbdb667f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/MaYP1998.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskExecutor.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TaskExecutor.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/taskExecutor/Bean/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/bean/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/taskExecutor/utils/LimitedTaskRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/LimitedTaskRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/taskExecutor/utils/TaskExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/taskExecutor/utils/TaskRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/utils/taskExecutor/utils/TaskExecutorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +26,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1456">
-              <caret line="97" column="39" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+            <state relative-caret-position="285">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+            <state relative-caret-position="304">
+              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +103,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/utils/taskExecutor/utils/LimitedTaskRunnable.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/utils/taskExecutor/utils/TaskExecutorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/utils/TaskExecutorTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -131,7 +135,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,19 +172,17 @@
               <item name="taskExecutor" type="b2602c69:ProjectViewProjectNode" />
               <item name="TaskExecutor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="taskExecutor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TaskExecutor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="taskExecutor" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,7 +228,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TaskExecutorTest.test">
+  <component name="RunManager" selected="JUnit.TaskExecutorTest.test (2)">
     <configuration name="TaskExecutorTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taskExecutor" />
       <extension name="coverage">
@@ -238,6 +239,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.utils.taskExecutor.utils" />
       <option name="MAIN_CLASS_NAME" value="com.utils.taskExecutor.utils.TaskExecutorTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskExecutorTest.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskExecutor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.mayp1998.taskExecutor.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.mayp1998.taskExecutor.util" />
+      <option name="MAIN_CLASS_NAME" value="com.github.mayp1998.taskExecutor.util.TaskExecutorTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -262,6 +279,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TaskExecutorTest.test (2)" />
         <item itemvalue="JUnit.TaskExecutorTest.test" />
         <item itemvalue="JUnit.TaskExecutorTest.test (1)" />
       </list>
@@ -285,25 +303,12 @@
       <workItem from="1569224411180" duration="3180000" />
       <workItem from="1569229575376" duration="1043000" />
       <workItem from="1569285873312" duration="7156000" />
+      <workItem from="1569315025557" duration="737000" />
+      <workItem from="1569373559239" duration="1895000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TaskExecutorTest_test - 2019.09.23 at 10h 33m 37s.xml">
-      <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskExecutorTest_test - 2019.09.23 at 10h 35m 25s.xml">
-      <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskExecutorTest_test - 2019.09.23 at 10h 36m 35s.xml">
-      <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskExecutorTest_test - 2019.09.23 at 10h 38m 57s.xml">
-      <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskExecutorTest_test - 2019.09.23 at 10h 41m 15s.xml">
-      <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TaskExecutorTest_test - 2019.09.23 at 10h 43m 24s.xml">
       <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
     </history-entry>
@@ -319,9 +324,24 @@
     <history-entry file="TaskExecutorTest_test - 2019.09.24 at 08h 46m 09s.xml">
       <configuration name="TaskExecutorTest.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TaskExecutorTest_test_(2) - 2019.09.25 at 09h 09m 39s.xml">
+      <configuration name="TaskExecutorTest.test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskExecutorTest_test_(2) - 2019.09.25 at 09h 09m 52s.xml">
+      <configuration name="TaskExecutorTest.test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskExecutorTest_test_(2) - 2019.09.25 at 09h 10m 35s.xml">
+      <configuration name="TaskExecutorTest.test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskExecutorTest_test_(2) - 2019.09.25 at 09h 13m 25s.xml">
+      <configuration name="TaskExecutorTest.test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskExecutorTest_test_(2) - 2019.09.25 at 09h 16m 00s.xml">
+      <configuration name="TaskExecutorTest.test (2)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38394000" />
+    <option name="totallyTimeSpent" value="41026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,8 +354,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.20844504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.21380697" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.25670242" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -344,7 +365,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,7 +394,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/taskExecutor.iml" />
+    <entry file="file://$PROJECT_DIR$/TaskExecutor.iml" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -381,10 +402,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/bean/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        <state relative-caret-position="2622">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-list" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -401,30 +430,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/bean/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        <state relative-caret-position="304">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-list">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state relative-caret-position="304">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -433,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1456">
-          <caret line="97" column="39" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+        <state relative-caret-position="285">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>

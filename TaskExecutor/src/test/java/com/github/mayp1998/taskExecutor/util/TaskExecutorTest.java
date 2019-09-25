@@ -19,9 +19,9 @@ public class TaskExecutorTest {
         Map<String, Task> map = new HashMap<>();
 
         Task task1 = new Task(() -> {
-            System.out.println("Hello!" + LocalDateTime.now().toLocalTime()+ ";");
+//            System.out.println("Hello!" + LocalDateTime.now().toLocalTime()+ ";");
         }, "0/1 * * * * ?");
-        task1.setMaxRunNumber(10);
+        //task1.setMaxRunNumber(10);
         map.put("task1", task1);
         Task task2 = new Task(() -> {
             //System.out.println("Hello2!" + LocalDateTime.now().toLocalTime()+ ";");
@@ -31,12 +31,12 @@ public class TaskExecutorTest {
             // System.out.println("Hello3!" + LocalDateTime.now().toLocalTime()+ ";");
         }, "30/30 * * * * ?");
         map.put("task3", task3);
-
-        Task task4 = new Task(() -> {
-            System.out.println("Hello4!" + LocalDateTime.now().toLocalTime()+ ";");
-        }, new Date(new Date().getTime()+1000), 1, true);
-        task4.setMaxRunNumber(3);
-        map.put("task4", task4);
+//
+//        Task task4 = new Task(() -> {
+//            //System.out.println("Hello4!" + LocalDateTime.now().toLocalTime()+ ";");
+//        }, new Date(new Date().getTime()+1000), 1, true);
+//        task4.setMaxRunNumber(3);
+//        map.put("task4", task4);
 
 
         taskExecutor.runTasks(map);
@@ -44,9 +44,10 @@ public class TaskExecutorTest {
         long starttime = new Date().getTime();
         boolean t = true;
         while (true) {
-            long nowtime = new Date().getTime();
-            long temp = (nowtime - starttime) % 60000;
             break;
+//            long nowtime = new Date().getTime();
+//            long temp = (nowtime - starttime) % 60000;
+            //break;
 //            if (temp <= 15000) {
 //                if (t) {
 //                    taskExecutor.startTask("task1");

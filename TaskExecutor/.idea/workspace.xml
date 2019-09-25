@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f34a3b1-fc25-47ad-b380-92fcbdb667f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskExecutor.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TaskExecutor.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -306,7 +304,7 @@
       <workItem from="1569229575376" duration="1043000" />
       <workItem from="1569285873312" duration="7156000" />
       <workItem from="1569315025557" duration="737000" />
-      <workItem from="1569373559239" duration="1239000" />
+      <workItem from="1569373559239" duration="1895000" />
     </task>
     <servers />
   </component>
@@ -343,7 +341,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40370000" />
+    <option name="totallyTimeSpent" value="41026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="285">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>

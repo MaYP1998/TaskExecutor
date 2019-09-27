@@ -13,7 +13,7 @@ public class Task {
   private boolean type;// 任务类型：普通任务/cron任务
 
   private Date start;// 任务的首次启动时间
-  private Integer period;// 任务的执行周期，以秒为周期
+  private Long period;// 任务的执行周期，以秒为周期
   private Boolean isRunNow = false;
 
   private String cron;// 任务执行周期的cron表达式
@@ -49,7 +49,7 @@ public class Task {
    * @param period 任务执行周期
    * @param runNow 是否立即执行一次，独立于任务起始时间的那一次执行。
    */
-  public Task(Runnable runnable, Date start, Integer period, Boolean ... runNow) {
+  public Task(Runnable runnable, Date start, Long period, Boolean ... runNow) {
     this.start = start;
     if (period != null && period < 0) {
       this.period = null;
@@ -119,7 +119,7 @@ public class Task {
     return start;
   }
 
-  public final Integer getPeriod() {
+  public final Long getPeriod() {
     return (period != null && period < 0) ? null : period;
   }
 

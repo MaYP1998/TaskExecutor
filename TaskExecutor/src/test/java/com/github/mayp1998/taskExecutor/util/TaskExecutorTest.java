@@ -3,6 +3,7 @@ package com.github.mayp1998.taskExecutor.util;
 
 
 import com.github.mayp1998.taskExecutor.bean.Task;
+import lombok.Data;
 import org.junit.Test;
 
 
@@ -69,5 +70,27 @@ public class TaskExecutorTest {
 //                e.printStackTrace();
 //            }
         }
+    }
+
+    @Test
+    public void test2() throws InterruptedException {
+        TaskExecutor taskExecutor = TaskExecutor.getNewInstance();
+        boolean t1 = true;
+        while (true) {
+            Task task = new Task(() -> {
+            }, "0/1 * * * * ?");
+            taskExecutor.alterAndRunTask("task", task);
+            break;
+        }
+    }
+
+    @Test
+    public void test3() {
+        TaskExecutor taskExecutor = TaskExecutor.getInstance();
+        long datelong = new Date().getTime()+ (long)2592000;
+        Date date = new Date(datelong);
+        Task task = new Task(() -> {
+        }, date, (long)2592000);
+        taskExecutor.runTask("1", task);
     }
 }

@@ -7,7 +7,7 @@
 
     <groupId>com.github.mayp1998.taskExecutor</groupId>
     <artifactId>TaskExecutor</artifactId>
-    <version>1.0.4.RELEASE</version>
+    <version>1.0.5.RELEASE</version>
 <!--    <version>1.0-SNAPSHOT</version>-->
     <packaging>jar</packaging>
     <name>TaskExecutor</name>
@@ -59,7 +59,6 @@
         <profile>
             <id>disable-javadoc-doclint</id>
             <activation>
-<!--                <jdk>[1.8,)</jdk>-->
                 <jdk>1.8</jdk>
             </activation>
         </profile>

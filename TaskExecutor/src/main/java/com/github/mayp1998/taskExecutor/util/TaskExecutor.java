@@ -360,23 +360,21 @@ public class TaskExecutor {
     if (task.getFuture() == null) {
       if (!task.isType()) {// 判断任务类型，真表示为cron类型任务
         Date start = task.getStart();
-        Integer period = task.getPeriod();
+        Long period = task.getPeriod();
         Boolean isRunNow = task.isRunNow();
         //Runnable runnable = task.getRunnable();
         Runnable runnable = new LimitedTaskRunnable(task);
-
         Future<?> future = null;
         if (isRunNow) {
           service.schedule(runnable, 0, TimeUnit.MILLISECONDS);
         }
-
         if (start != null && period != null) {
           long starttemp = start.getTime();
           long periodtemp = period * 1000;
-          int starttime = (int)(starttemp - new Date().getTime());
+          long starttime = starttemp - new Date().getTime();
           while (starttime < 0) {
             starttemp += periodtemp;
-            starttime = (int)(starttemp - new Date().getTime());
+            starttime = starttemp - new Date().getTime();
           }
           // 第二个参数为首次执行的延时时间，第三个参数为定时执行的间隔时间
           future = service.scheduleAtFixedRate(runnable, starttime, period * 1000, TimeUnit.MILLISECONDS);
@@ -390,9 +388,7 @@ public class TaskExecutor {
         task.setFuture(future);
       } else {
         TaskRunnable runnable = new TaskRunnable(new LimitedTaskRunnable(task), task.getCron(), task, service);
-
         Future<?> future = service.schedule(runnable, runnable.getNextTriggerTime(), TimeUnit.MILLISECONDS);
-
         task.setFuture(future);
       }
     }

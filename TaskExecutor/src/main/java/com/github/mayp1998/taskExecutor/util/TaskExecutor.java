@@ -36,6 +36,14 @@ public class TaskExecutor {
     return Singleton.instance;
   }
 
+  /**
+   * 额外创建新对象，不影响原单例对象的使用
+   * @return
+   */
+  public static TaskExecutor getNewInstance() {
+    return new TaskExecutor();
+  }
+
   @Override
   protected void finalize() throws Throwable {
     shutdownAll();
@@ -56,6 +64,9 @@ public class TaskExecutor {
         shutdownTask(id, forceToStop);
       }
     }
+    service = Executors.newSingleThreadScheduledExecutor();
+    group.clear();
+    group = new ConcurrentHashMap<>();
   }
 
   public Map<String, Integer> getAllTaskRunNumber() {
@@ -190,7 +201,7 @@ public class TaskExecutor {
   /**
    * 暂停任务
    * @param taskId
-   * @param isForceToStop 是否强制终止；如果是cron类型的任务，则一定会强制终止，此变量失效
+   * @param isForceToStop 是否强制终止正在运行中的任务
    * @return
    */
   public boolean pauseTask(String taskId, boolean ... isForceToStop) {
@@ -200,8 +211,8 @@ public class TaskExecutor {
     }
     if (group.containsKey(taskId)) {
       Task task = group.get(taskId);
-      task.stop(forceToStop || task.isType());
       task.setFuture(null);
+      task.stop(forceToStop);// || task.isType());
       return true;
     }
     return false;
@@ -300,7 +311,7 @@ public class TaskExecutor {
   /**
    * 关闭任务
    * @param taskId
-   * @param isForceToStop 如果是cron类型的任务，则一定会强制终止，此变量失效
+   * @param isForceToStop 是否强制终止正在运行中的任务
    * @return
    */
   public Boolean shutdownTask(String taskId, boolean ... isForceToStop) {
@@ -310,8 +321,8 @@ public class TaskExecutor {
     }
     if (group.containsKey(taskId)) {
       Task task = group.get(taskId);
-      Boolean result = task.stop(forceToStop || task.isType());
       task.setFuture(null);
+      Boolean result = task.stop(forceToStop);// || task.isType());
       group.remove(taskId);
       return result;
     }

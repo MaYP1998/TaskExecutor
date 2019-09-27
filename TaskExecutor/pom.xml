@@ -7,7 +7,8 @@
 
     <groupId>com.github.mayp1998.taskExecutor</groupId>
     <artifactId>TaskExecutor</artifactId>
-    <version>1.0.1.RELEASE</version>
+<!--    <version>1.0.4.RELEASE</version>-->
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>TaskExecutor</name>
     <description>Java universal task executor, base on the java.util.concurrent.ScheduledExecutorService.</description>

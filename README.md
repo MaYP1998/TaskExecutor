@@ -8,7 +8,7 @@ Java通用的任务执行器，基于java.util.concurrent.ScheduledExecutorServi
 <dependency>
   <groupId>com.github.mayp1998.taskExecutor</groupId>
   <artifactId>TaskExecutor</artifactId>
-  <version>1.0.4.RELEASE</version>
+  <version>1.0.5.RELEASE</version>
 </dependency>
 ```
 

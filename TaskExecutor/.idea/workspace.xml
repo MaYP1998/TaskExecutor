@@ -6,14 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f34a3b1-fc25-47ad-b380-92fcbdb667f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/bean/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/bean/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/LimitedTaskRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/LimitedTaskRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/mayp1998/taskExecutor/util/TaskExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="3f34a3b1-fc25-47ad-b380-92fcbdb667f7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="269">
-              <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+              <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -403,7 +396,7 @@
       <workItem from="1569569961149" duration="487000" />
       <workItem from="1569570459332" duration="2541000" />
       <workItem from="1569573654901" duration="1866000" />
-      <workItem from="1569654745502" duration="1381000" />
+      <workItem from="1569654745502" duration="2207000" />
     </task>
     <servers />
   </component>
@@ -440,7 +433,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49928000" />
+    <option name="totallyTimeSpent" value="50754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -453,6 +446,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.12064343" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.25670242" />
@@ -554,7 +548,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/mayp1998/taskExecutor/util/TaskExecutorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
-          <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+          <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

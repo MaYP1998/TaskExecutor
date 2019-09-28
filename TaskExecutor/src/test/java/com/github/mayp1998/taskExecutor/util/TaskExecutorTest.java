@@ -90,7 +90,7 @@ public class TaskExecutorTest {
         long datelong = new Date().getTime()+ (long)2592000;
         Date date = new Date(datelong);
         Task task = new Task(() -> {
-        }, date, (long)2592000);
+        }, date, (long) 259000000);
         taskExecutor.runTask("1", task);
     }
 }

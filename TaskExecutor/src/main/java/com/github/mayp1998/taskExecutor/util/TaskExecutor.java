@@ -69,8 +69,8 @@ public class TaskExecutor {
     group = new ConcurrentHashMap<>();
   }
 
-  public Map<String, Integer> getAllTaskRunNumber() {
-    Map<String, Integer> result = new HashMap<>();
+  public Map<String, Long> getAllTaskRunNumber() {
+    Map<String, Long> result = new HashMap<>();
     for (Map.Entry<String, Task> task : group.entrySet()) {
       result.put(task.getKey(), (task.getValue().getRun()));
     }
@@ -82,7 +82,7 @@ public class TaskExecutor {
    * @param taskId
    * @return
    */
-  public Integer getTaskRunNumber(String taskId) {
+  public Long getTaskRunNumber(String taskId) {
     if (group.containsKey(taskId)) {
       return group.get(taskId).getRun();
     }

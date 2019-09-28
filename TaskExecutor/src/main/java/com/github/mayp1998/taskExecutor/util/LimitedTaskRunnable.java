@@ -10,9 +10,9 @@ public class LimitedTaskRunnable implements Runnable {
     private Runnable runnable;
 
     private boolean type;
-    private int runNumber;
+    private long runNumber;
 
-    private int run;// 已运行次数
+    private long run;// 已运行次数
 
     public LimitedTaskRunnable(Task task) {
         this.task = task;

@@ -18,9 +18,9 @@ public class Task {
 
   private String cron;// 任务执行周期的cron表达式
 
-  private int maxRunNumber = 0;
+  private long maxRunNumber = 0;
 
-  private int run = 0;
+  private long run = 0;
   private Runnable runnable;
   private Future<?> future;
 
@@ -55,6 +55,36 @@ public class Task {
       this.period = null;
     } else {
       this.period = period;
+    }
+    this.runnable = runnable;
+    Boolean isRun = false;
+    for (Boolean i : runNow) {
+      if (i != null) {
+        isRun = i;
+      }
+    }
+    this.isRunNow = isRun;
+    this.type = false;
+  }
+
+  /**
+   * 依据参数start，period，runNow（默认为false）的情况，共分为以下四种执行情况：
+   * 1.null，null，true/false：若为true则立即执行一次。
+   * 2.null，not null，true/false：若为true则立即执行一次；之后周期执行。
+   * 3.not null，null，true/false：若为true则立即执行一次；到start时间执行一次。
+   * 4.not null，not null，true/false：若为true则立即执行一次；到start时间执行一次，之后周期执行。
+   * @author myp
+   * @param runnable 所执行的任务内容
+   * @param start 任务起始时间
+   * @param period 任务执行周期
+   * @param runNow 是否立即执行一次，独立于任务起始时间的那一次执行。
+   */
+  public Task(Runnable runnable, Date start, Integer period, Boolean ... runNow) {
+    this.start = start;
+    if (period != null && period < 0) {
+      this.period = null;
+    } else {
+      this.period = period != null ? (long) period : null;
     }
     this.runnable = runnable;
     Boolean isRun = false;
@@ -147,15 +177,15 @@ public class Task {
     return cron;
   }
 
-  public final int getMaxRunNumber() {
+  public final long getMaxRunNumber() {
     return maxRunNumber;
   }
 
-  public final int getRun() {
+  public final long getRun() {
     return run;
   }
 
-  public final void setRun(int run) {
+  public final void setRun(long run) {
     this.run = run;
   }
 }

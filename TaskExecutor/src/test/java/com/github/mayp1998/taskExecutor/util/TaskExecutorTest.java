@@ -7,6 +7,10 @@ import lombok.Data;
 import org.junit.Test;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.HashMap;
@@ -85,12 +89,53 @@ public class TaskExecutorTest {
     }
 
     @Test
-    public void test3() {
+    public void test3() throws Exception {// 综合测试 startTime & period 类型任务的运行精确度，同理也可以用来测试cron表达式类型的任务
+        File f = new File("C:\\Users\\Administrator\\Desktop\\out.txt");// 日志文件路径
+        FileOutputStream fileOutputStream = new FileOutputStream(f);
+        PrintStream printStream = new PrintStream(fileOutputStream);
+        System.setOut(printStream);
+        System.out.println("默认输出到了文件out.txt");
+
         TaskExecutor taskExecutor = TaskExecutor.getInstance();
-        long datelong = new Date().getTime()+ (long)2592000;
+        long datelong = new Date().getTime()+ (long)5000;
         Date date = new Date(datelong);
-        Task task = new Task(() -> {
-        }, date, (long) 259000000);
-        taskExecutor.runTask("1", task);
+        System.out.println("startTime:" + date.toString());
+        Task task1 = new Task(() -> {
+            System.out.println("Running minute! Time:" + LocalDateTime.now().toString());
+        }, date, 60);
+        taskExecutor.runTask("1", task1);
+
+        Task task2 = new Task(() -> {
+            System.out.println("Running hour! Time:" + LocalDateTime.now().toString());
+        }, date, 3600);
+        taskExecutor.runTask("2", task2);
+
+        Task task3 = new Task(() -> {
+            System.out.println("\nRunning day! Time:" + LocalDateTime.now().toString() + "\n");
+        }, date, 86400);
+        taskExecutor.runTask("3", task3);
+
+        while (true) {
+            Thread.sleep(1000000000);
+        }
+    }
+
+    @Test
+    public void test4() throws InterruptedException {
+        TaskExecutor taskExecutor = TaskExecutor.getInstance();
+
+        while (true) {
+            Task task = new Task(() -> {
+                try {
+                    Thread.sleep(1500);
+                    System.out.println("HHHh" + LocalDateTime.now().toString());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }, "* * * * * ?");
+            taskExecutor.alterAndRunTask("1", task);
+            Thread.sleep(100);
+        }
+
     }
 }

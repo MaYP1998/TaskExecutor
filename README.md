@@ -17,6 +17,7 @@ Java通用的任务执行器，基于java.util.concurrent.ScheduledExecutorServi
 compile group: 'com.github.mayp1998.taskExecutor', name: 'TaskExecutor', version: '1.0.5.RELEASE'
 ```
 
+### 功能简介：
 
 #### A. 拥有多项任务调度功能：
 
